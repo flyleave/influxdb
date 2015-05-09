@@ -8,7 +8,7 @@ import (
 	"github.com/influxdb/influxdb/meta/internal"
 )
 
-//go:generate protoc --gogo_out=. internal/meta.proto
+//go:generate flatc -g meta.fbs
 
 // Data represents the top level collection of all metadata.
 type Data struct {
